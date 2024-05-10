@@ -1,0 +1,36 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding: 20px;
+    gap: 20px;
+
+    .image {
+        width: 100%;
+        height: 400px;
+        border: 2px solid black;
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+
+        img {
+            @include img(100%, 100%, cover);
+        }
+
+        .gallery-text {
+            position: absolute;
+            width: 20%;
+            justify-content: center;
+            align-items: center;
+            opacity: 100%;
+        }
+
+        &:hover {
+            .gallery-text {
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
