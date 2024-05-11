@@ -403,7 +403,7 @@ form div button {
     height: 500px;
   }
   .product-div {
-    background-image: url(../../images/EnduroAlquiler.jpeg);
+    background-image: url(../images/EnduroAlquiler.jpeg);
     background-size: cover;
   }
   .product-div .products {
