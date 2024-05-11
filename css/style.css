@@ -131,7 +131,7 @@ footer .socials .instagram .logo, footer .socials .whatsapp .logo {
 }
 
 .product-div {
-  background-image: url(../../images/EnduroAlquiler.jpeg);
+  background-image: url(../images/EnduroAlquiler.jpeg);
   background-attachment: fixed;
 }
 .product-div .products { /* Caja global */
@@ -197,7 +197,7 @@ footer .socials .instagram .logo, footer .socials .whatsapp .logo {
 }
 
 .center-tienda {
-  background-image: url(../../images/EnduroTienda.jpeg);
+  background-image: url(../images/EnduroTienda.jpeg);
   background-attachment: fixed;
   background-size: cover;
   display: flex;
@@ -328,7 +328,7 @@ form div button {
 }
 
 .seccion-contacto {
-  background-image: url(../../images/EnduroContacto.webp);
+  background-image: url(../images/EnduroContacto.webp);
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
