@@ -1,0 +1,25 @@
+$evento: nada;
+$color: white;
+$fondo: black;
+$fondo-index: rgba(0, 0, 0, 0.5);
+
+/* Valores para evento: nada, navidad, valentin, AnoNuevo */
+
+@if $evento == navidad {
+    $color: rgb(168, 0, 0);
+    $fondo: green;
+    $fondo-index: rgba(0, 128, 0, 0.5)
+} @else if $evento == valentin {
+    $color: pink;
+    $fondo: red;
+    $fondo-index: hsla(0, 100%, 50%, 0.5);
+} @else if $evento == AnoNuevo {
+    $color: red;
+    $fondo: blue;
+    $fondo-index: rgba(0, 0, 255, 0.5);
+} @else {
+    $color: white;
+    $fondo: black;
+    $fondo-index: gray;
+}
+

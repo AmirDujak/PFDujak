@@ -40,7 +40,6 @@
               </button>
               <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                  <h2 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -71,7 +70,8 @@
           </nav>
     </header>
 
-    <main class="seccion_contacto"> <!-- La sección de contacto -->
+    <main> <!-- La sección de contacto -->
+      <div class="seccion-contacto center">
         <h1>¿Querés contactar con nosotros? Rellena el formulario de abajo y te enviaremos un mensaje por WhatsApp</h1>
         <form>
             <div>
@@ -96,13 +96,14 @@
                 <input type="email" id="email" placeholder="Ingresa tu correo electrónico">
             </div>
             <div>
-                <label for="mensaje">Mensaje:</label>
+                <label for="mensaje">Escribe tu mensaje a continuación:</label>
                 <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingresa tu mensaje"></textarea>
             </div>
             <div>
                 <button type="submit">Enviar</button>
             </div>
         </form>
+      </div>
     </main>
 
     <footer class="bg-secondary flex">

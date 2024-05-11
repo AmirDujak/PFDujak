@@ -3,3 +3,9 @@
     height: 50px;
     object-fit: cover;
 }
+
+.navbar-brand, .nav-link-active, .nav-link, .nav-link-dropdown-toggle, .dropdown-item {
+    color: black;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}

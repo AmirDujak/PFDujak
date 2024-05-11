@@ -10,10 +10,10 @@
   font-family: "Roboto";
   src: url(Roboto_Slab/Roboto_Slab-VariableFont_wght.ttf);
 }
-body {
-  background-color: black;
-}
-
+/* main {
+    background-color: black;
+} */
+/* Valores para evento: nada, navidad, valentin, AnoNuevo */
 /* Importar components*/
 /* Mover luego lo de abajo a los archivos donde corresponden */
 h1 {
@@ -44,6 +44,12 @@ h1 {
   object-fit: cover;
 }
 
+.navbar-brand, .nav-link-active, .nav-link, .nav-link-dropdown-toggle, .dropdown-item {
+  color: black;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
 footer {
   display: flex;
   flex-direction: row;
@@ -65,8 +71,11 @@ footer .map .map-text {
   display: flex;
   justify-content: center;
   font-size: 20px;
-  width: 600px;
+  font-family: "roboto";
+  text-align: start;
+  font-weight: bold;
   color: black;
+  width: 600px;
 }
 footer .socials {
   height: 100%;
@@ -76,6 +85,8 @@ footer .socials .instagram a, footer .socials .whatsapp a {
   text-decoration: none;
   color: black;
   font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 footer .socials .instagram .logo, footer .socials .whatsapp .logo {
   width: 40px;
@@ -83,18 +94,13 @@ footer .socials .instagram .logo, footer .socials .whatsapp .logo {
 }
 
 /* Importar layouts */
-.article .img {
-  width: 50%;
-  height: 600px;
-  object-fit: cover;
+.main-index {
+  background-color: black;
 }
-.article .img:hover {
-  width: 60%;
-  height: 700px;
-  transition: 2s;
+.main-index h1 {
+  color: white;
 }
-
-.article .article-content {
+.main-index .article .article-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,7 +108,7 @@ footer .socials .instagram .logo, footer .socials .whatsapp .logo {
   gap: 15px;
   width: 50%;
 }
-.article .article-content p {
+.main-index .article .article-content p {
   font-size: 30px;
   font-family: "Roboto";
   text-align: center;
@@ -110,7 +116,7 @@ footer .socials .instagram .logo, footer .socials .whatsapp .logo {
   color: white;
   width: 80%;
 }
-.article .article-content h2 {
+.main-index .article .article-content h2 {
   font-size: 40px;
   font-family: "Roboto";
   text-align: center;
@@ -118,22 +124,27 @@ footer .socials .instagram .logo, footer .socials .whatsapp .logo {
   color: white;
   width: 80%;
 }
-.article .article-content:hover {
-  background-color: rgba(128, 128, 128, 0.398);
-  transition: 1s;
+.main-index .article .img {
+  width: 50%;
+  height: 600px;
+  object-fit: cover;
 }
 
 .product-div {
-  background-color: gray;
+  background-image: url(../../images/EnduroAlquiler.jpeg);
+  background-attachment: fixed;
 }
 .product-div .products { /* Caja global */
   flex-wrap: wrap;
   padding: 20px;
-  background-color: gray;
   gap: 20px;
   width: 60%;
   padding: 20px;
   flex-direction: column;
+}
+.product-div .products h1 {
+  color: white;
+  background-color: black;
 }
 .product-div .products .product-opcion { /* Secciones de productos de dos en dos */
   flex-direction: row;
@@ -163,6 +174,8 @@ footer .socials .instagram .logo, footer .socials .whatsapp .logo {
 }
 .product-div .products .product-opcion .product h2 {
   padding: 15px;
+  color: white;
+  font-weight: bold;
 }
 .product-div .products .product-opcion .product-content { /* Caja de texto de los productos */
   font-size: 20px;
@@ -172,25 +185,44 @@ footer .socials .instagram .logo, footer .socials .whatsapp .logo {
   gap: 15px;
   justify-content: center;
   color: white;
+  font-weight: bold;
 }
 .product-div .products .product-opcion .product-content a {
   text-decoration: none;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   padding: 10px;
   width: 100%;
   border-radius: 10px;
 }
 
-.tienda-container {
+.center-tienda {
+  background-image: url(../../images/EnduroTienda.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+.center-tienda h1 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  width: 75%;
+}
+.center-tienda .tienda-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
   padding: 20px;
   gap: 20px;
-  background-color: black;
   width: 75%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.tienda-container .tienda {
+.center-tienda .tienda-container .tienda {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -200,64 +232,140 @@ footer .socials .instagram .logo, footer .socials .whatsapp .logo {
   border: 1px solid black;
   box-shadow: 9px 9px 9px rgb(55, 55, 55);
 }
-.tienda-container .tienda img {
+.center-tienda .tienda-container .tienda img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
-.tienda-container .tienda div {
+.center-tienda .tienda-container .tienda div {
   padding: 20px;
-  background-color: white;
+  background-color: black;
   width: 100%;
 }
-.tienda-container .tienda div h2 {
-  color: black;
+.center-tienda .tienda-container .tienda div h2, .center-tienda .tienda-container .tienda div p {
+  color: white;
+}
+.center-tienda .tienda-container .tienda div:hover {
+  background-color: black;
+  color: white;
+}
+.center-tienda .tienda-container .tienda div:hover h2 {
+  color: white;
 }
 
-.gallery {
+.gallery-main {
+  background-color: black;
+}
+.gallery-main h1 {
+  color: white;
+}
+.gallery-main .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   padding: 20px;
   gap: 20px;
+  place-content: center;
+  background-color: black;
 }
-.gallery .image {
-  width: 100%;
-  height: 400px;
-  border: 2px solid black;
+.gallery-main .gallery .gallery-image {
+  display: grid;
+  place-content: center;
+  border: 2px solid white;
   border-radius: 15px;
   overflow: hidden;
-  display: flex;
+  position: relative;
 }
-.gallery .image img {
+.gallery-main .gallery .gallery-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.gallery .image .gallery-text {
+.gallery-main .gallery .gallery-image div {
+  background-color: rgba(0, 0, 0, 0.265);
+  padding: 20px;
+  color: white;
   position: absolute;
-  width: 20%;
-  justify-content: center;
-  align-items: center;
-  opacity: 100%;
-}
-.gallery .image:hover .gallery-text {
+  height: 100%;
+  transition: 0.5s;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+}
+.gallery-main .gallery .gallery-image:hover div {
+  opacity: 1;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-label {
+form {
+  padding: 10px;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60;
+  padding: 10px;
+}
+form div label {
   color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+form div input {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+form div button {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
 }
 
+.seccion-contacto {
+  background-image: url(../../images/EnduroContacto.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+.seccion-contacto h1 {
+  font-size: 40px;
+  font-family: "Roboto";
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  width: 65%;
+  background-color: black;
+}
+
+@media (min-width: 992px) {
+  .article .article-content:hover {
+    background-color: rgba(128, 128, 128, 0.398);
+    transition: 1s;
+  }
+  .article .img {
+    width: 50%;
+    height: 600px;
+    object-fit: cover;
+  }
+  .article .img:hover {
+    width: 60%;
+    height: 700px;
+    transition: 2s;
+  }
+}
 @media (max-width: 1146px) {
   .tienda-container {
     width: 60%;
   }
 }
 @media (max-width: 991px) {
-  .article {
+  .main-index .article {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -266,14 +374,14 @@ label {
     width: 100%;
     padding: 10px;
   }
-  .article .article-content {
+  .main-index .article .article-content {
     position: absolute;
     justify-content: end;
     height: 500px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.361);
   }
-  .article .article-content h2 {
+  .main-index .article .article-content h2 {
     font-size: 2rem;
     font-family: "Roboto";
     text-align: center;
@@ -281,7 +389,7 @@ label {
     color: white;
     width: 100%;
   }
-  .article .article-content p {
+  .main-index .article .article-content p {
     font-size: 1rem;
     font-family: "Roboto";
     text-align: center;
@@ -289,10 +397,14 @@ label {
     color: white;
     width: 90%;
   }
-  .article img {
+  .main-index .article .img {
+    /* @include img(100%, 500px, cover); */
     width: 100%;
     height: 500px;
-    object-fit: cover;
+  }
+  .product-div {
+    background-image: url(../../images/EnduroAlquiler.jpeg);
+    background-size: cover;
   }
   .product-div .products {
     width: 75%;
@@ -357,7 +469,7 @@ label {
     width: 100%;
   }
   .product-div .products {
-    width: 100%;
+    width: 80%;
   }
   .product-div .products .product-opcion .product {
     width: 100%;

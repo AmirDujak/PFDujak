@@ -1,25 +1,25 @@
-.article .img {
-    @include img(50%, 600px, cover);
+.main-index {
+    background-color: $fondo;
 
-    &:hover {
-        width: 60%;
-        height: 700px;
-        transition: 2s;
-    }
-}
-.article .article-content {
-    @include flex(flex, column, center, center, 15px, 50%);
-    
-    p {
-        @include texto(30px, 'Roboto', center, bold, white, 80%);
+    h1 {
+        color: $color;
     }
     
-    h2 {
-        @include texto(40px, 'Roboto', center, bold, white, 80%);
+    .article .article-content {
+        @include flex(flex, column, center, center, 15px, 50%);
+            
+        p {
+            @include texto(30px, 'Roboto', center, bold, $color, 80%);
+        }
+            
+        h2 {
+            @include texto(40px, 'Roboto', center, bold, $color, 80%);
+        }
+        
     }
-
-     &:hover {
-        background-color: rgba(128, 128, 128, 0.398);
-        transition: 1s;
+    
+    .article .img {
+        @include img(50%, 600px, cover);
     }
 }
+

@@ -1,27 +1,51 @@
-.tienda-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
-    padding: 20px;
-    gap: 20px;
-    background-color: black;
-    width: 75%;
+.center-tienda {
+    background-image: url(../../images/EnduroTienda.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    @include flex(flex, column, center, center, 0, 100%);
 
-    .tienda {
-        @include flex(flex, column, center, center, 0px, 100%);
-        border: 1px solid black;
-        box-shadow: 9px 9px 9px rgb(55, 55, 55);
+    h1 {
+        color: $color;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        width: 75%;
+    }
 
-        img {
-            @include img(100%, 300px, cover);
-        }
+    .tienda-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+        padding: 20px;
+        gap: 20px;
+        width: 75%;
+        background-color: rgba(0, 0, 0, 0.5);
+    
+        .tienda {
+            @include flex(flex, column, center, center, 0px, 100%);
+            border: 1px solid black;
+            box-shadow: 9px 9px 9px rgb(55, 55, 55);
+    
+            img {
+                @include img(100%, 300px, cover);
+            }
+    
+            div {
+                padding: 20px;
+                background-color: $fondo;
+                width: 100%;
 
-        div {
-            padding: 20px;
-            background-color: white;
-            width: 100%;
-
-            h2 {
-                color: black;
+                h2, p {
+                    color: $color;
+                }
+    
+                &:hover {
+                    background-color: darken($color: $fondo, $amount: 20%);
+                    color: $color;
+    
+                    h2 {
+                        color: $color;
+                    }
+                }
             }
         }
     }

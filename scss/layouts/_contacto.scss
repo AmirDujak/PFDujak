@@ -1,3 +1,39 @@
-label {
-    color: white;
+form {
+    padding: 10px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 60;
+        padding: 10px;
+        label {
+            color: $color;
+            background-color: $fondo;
+            border-radius: 5px;
+        }
+        input {
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px $fondo;
+            
+        }
+
+        button {
+            background-color: $fondo;
+            color: $color;
+            border-radius: 10px;
+        }
+    }
+}
+
+.seccion-contacto {
+    background-image: url(../../images/EnduroContacto.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+
+    h1 {
+        @include texto(40px, 'Roboto', center, bold, $color, 65%);
+        background-color: darken($color: $fondo, $amount: 20%);
+    }
 }

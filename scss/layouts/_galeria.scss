@@ -1,35 +1,47 @@
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    padding: 20px;
-    gap: 20px;
+.gallery-main {
+    background-color: $fondo;
+    h1 {
+        color: $color;
+    }
 
-    .image {
-        width: 100%;
-        height: 400px;
-        border: 2px solid black;
-        border-radius: 15px;
-        overflow: hidden;
-        display: flex;
-
-        img {
-            @include img(100%, 100%, cover);
-        }
-
-        .gallery-text {
-            position: absolute;
-            width: 20%;
-            justify-content: center;
-            align-items: center;
-            opacity: 100%;
-        }
-
-        &:hover {
-            .gallery-text {
-                opacity: 0;
-                width: 100%;
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        padding: 20px;
+        gap: 20px;
+        place-content: center;
+        background-color: $fondo;
+    
+        .gallery-image {
+            display: grid;
+            place-content: center;
+            border: 2px solid $color;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+    
+            img {
+                @include img(100%, 100%, cover);
+            }
+    
+            div {
+                background-color: rgba(0, 0, 0, 0.265);
+                padding: 20px;
+                color: white;
+                position: absolute;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
+                transition: 0.5s;
+                opacity: 0;
+                @include flex(flex, column, flex-end, center, 0, 100%);
+            }
+    
+            &:hover {
+                div {
+                    opacity: 1;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
             }
         }
     }

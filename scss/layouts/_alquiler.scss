@@ -1,14 +1,19 @@
 .product-div {
-    background-color: gray;
+    background-image: url(../../images/EnduroAlquiler.jpeg);
+    background-attachment: fixed;
 
     .products { /* Caja global */
         flex-wrap: wrap;
         padding: 20px;
-        background-color: gray;
         gap: 20px;
         width: 60%;
         padding: 20px;
         flex-direction: column;
+
+        h1 {
+            color: $color;
+            background-color: $fondo;
+        }
     
         .product-opcion { /* Secciones de productos de dos en dos */
             flex-direction: row;
@@ -25,7 +30,7 @@
             .product { /* Productos individuales dentro de cada sección de productos */
                 flex-direction: column;
                 width: 50%;
-                background-color: black;
+                background-color: $fondo;
                 border-radius: 20px;
 
                 &:hover {
@@ -39,6 +44,8 @@
     
                 h2 {
                     padding: 15px;
+                    color: $color;
+                    font-weight: bold;
                 }
             }
     
@@ -49,12 +56,13 @@
                 flex-direction: column;
                 gap: 15px;
                 justify-content: center;
-                color: white;
+                color: $color;
+                font-weight: bold;
             
                 a {
                     text-decoration: none;
-                    background-color: white;
-                    color: black;
+                    background-color: darken($color: $fondo, $amount: 20%);
+                    color: $color;
                     padding: 10px;
                     width: 100%;
                     border-radius: 10px;
