@@ -475,7 +475,7 @@ form div button {
     width: 100%;
   }
   .tienda-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   .tienda-container .tienda img {
     width: 50%;
