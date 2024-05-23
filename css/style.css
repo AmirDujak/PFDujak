@@ -477,11 +477,6 @@ form div button {
   .center-tienda .tienda-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  .center-tienda .tienda-container .tienda img {
-    width: 50%;
-    height: 300px;
-    object-fit: cover;
-  }
   footer .map iframe {
     width: 80%;
   }
