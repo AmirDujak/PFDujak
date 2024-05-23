@@ -474,10 +474,10 @@ form div button {
   .product-div .products .product-opcion .product {
     width: 100%;
   }
-  .tienda-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .center-tienda .tienda-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  .tienda-container .tienda img {
+  .center-tienda .tienda-container .tienda img {
     width: 50%;
     height: 300px;
     object-fit: cover;
